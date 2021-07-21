@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    position: relative;
+}
+
+
+
+.circulo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    margin: 75px auto;
+    align-items: center;
+    flex-direction: column-reverse;
+    background-color: antiquewhite;
+}
+
+.circulo::before {
+    content: ' ';
+    border-radius: 50%;
+    border: 2px solid gray;
+    z-index: 1;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
+}
