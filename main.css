@@ -1,10 +1,10 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 
-html {
+main {
     font-size: 62.5%;
     font-family: 'Roboto', Helvetica, sans-serif;
     position: relative;
@@ -17,22 +17,33 @@ html {
     width: 200px;
     height: 200px;
     border: 1px solid #fff;
+    color: #fff;
+    margin: 75px auto;
     display: flex;
     justify-content: center;
-    margin: 75px auto;
     align-items: center;
-    flex-direction: column-reverse;
-    background-color: antiquewhite;
+    flex-direction: column;
 }
 
 .circulo::before {
     content: ' ';
     border-radius: 50%;
-    border: 2px solid gray;
-    z-index: 1;
+    z-index: -1;
     position: absolute;
-    width: 160px;
-    height: 160px;
-    left: calc(50% - 80px);
-    top: calc(50% - 80px);
+    width: 240px;
+    height: 240px;
+    left: calc(50% - 120px);
+    top: calc(50% - 120px);
+    background-color: #1d1d1d;
+}
+
+.motion-sphere {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: antiquewhite;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    animation: rotate 60s linear infinite;
 }
